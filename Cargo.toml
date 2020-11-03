@@ -1,9 +1,8 @@
 [package]
-name = "bip39-tools"
+name = "bip39"
 version = "0.1.0"
 authors = ["nom <deathdisco@protonmail.com>"]
 edition = "2018"
 
 [dependencies]
 bip39 = "0.6.0-beta.1"
-quote = "=1.0.2"

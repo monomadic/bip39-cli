@@ -36,6 +36,13 @@ dependencies = [
 
 [[package]]
 name = "bip39"
+version = "0.1.0"
+dependencies = [
+ "bip39 0.6.0-beta.1",
+]
+
+[[package]]
+name = "bip39"
 version = "0.6.0-beta.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7059804e226b3ac116519a252d7f5fb985a5ccc0e93255e036a5f7e7283323f4"
@@ -47,14 +54,6 @@ dependencies = [
  "pbkdf2",
  "rand",
  "sha2",
-]
-
-[[package]]
-name = "bip39-tools"
-version = "0.1.0"
-dependencies = [
- "bip39",
- "quote",
 ]
 
 [[package]]

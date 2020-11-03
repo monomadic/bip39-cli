@@ -1,21 +1,22 @@
 use bip39::{Mnemonic, MnemonicType, Language, Seed};
 
 fn main() {
-    use bip39::{Mnemonic, MnemonicType, Language, Seed};
+    println!("BIP39 Mnemonic");
+    println!("==============\n");
 
-    /// create a new randomly generated mnemonic phrase
+    // create a new randomly generated mnemonic phrase
     let mnemonic = Mnemonic::new(MnemonicType::Words12, Language::English);
     
-    /// get the phrase
+    // get the phrase
     let phrase: &str = mnemonic.phrase();
-    println!("phrase: {}", phrase);
+    println!("Mnemonic Phrase:\n{}\n", phrase);
     
-    /// get the HD wallet seed
+    // get the HD wallet seed
     let seed = Seed::new(&mnemonic, "");
     
     // get the HD wallet seed as raw bytes
     let seed_bytes: &[u8] = seed.as_bytes();
     
     // print the HD wallet seed as a hex string
-    println!("{:X}", seed);
+    println!("Seed (Private Key):\n{:?}", seed);
 }
