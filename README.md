@@ -20,7 +20,7 @@ Seed (Private Key):
 
 ### Cargo
 ``` shell
-cargo install --path .
+cargo install --git https://github.com/monomadic/bip39-cli
 ```
 
 ### NixOS
