@@ -20,9 +20,11 @@ nix-env -if default.nix
 
 Or add this to your `configuration.nix` (no need to clone this repo):
 ``` nix
-nixpkgs.config.packageOverrides = pkgs: {
-  bip39 = pkgs.callPackage (import
-    (builtins.fetchGit { url = "https://github.com/monomadic/bip39-cli"; }))
-    { };
-};
+{
+  nixpkgs.config.packageOverrides = pkgs: {
+    bip39 = pkgs.callPackage (import
+      (builtins.fetchGit { url = "https://github.com/monomadic/bip39-cli"; }))
+      { };
+  };
+}
 ```
